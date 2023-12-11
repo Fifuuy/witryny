@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+    <script>
+        function zmt(a){
+            document.getElementById("prawy").style.backgroundColor = a
+        }
+        function zmc(){
+            document.getElementById("tekst").style.color = document.getElementById("wybor").value
+        }
+        function rozcz(){
+            wartosc = document.getElementById("rozmiar").value;
+            document.getElementById("prawy").style.fontSize = wartosc;
+        }
+        function ramka(){
+            wartosc =document.getElementById("rmk".value);
+            if(wartosc==true){
+                document.getElementById(zdj).style.border = "solid 1px black";
+            }
+            else{
+                document.getElementById("zdj").style.border="none"
+            }
+        }
+        function ksztalt(x){
+            document.getElementById("lista").style.listStyleType = x
+        }
+    </script>
+</head>
+<body> 
+    <div id="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>
+            Podaj kolor tła:  <br>
+            <input type="button" value="Indigo" id="indigo"
+            onclick="zmt('Indigo')">
+            <input type="button" value="SteelBlue" id="steelblue" onclick="zmt('SteelBlue')">
+            <input type="button" value="Olive" id="olive" onclick="zmt('Olive')">
+        </p>
+        <p>Podaj kolor czcionki <br>
+            <select name="" id="wybor" onchange="zmc()"> 
+                <option value="White">White</option>
+                <option value=" Tan"> Tan</option>
+                <option value="Bisque">Bisque</option>
+                <option value=" Plum "> Plum </option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach, np. 200%” <br>
+                <input type="number" name="" value = "100%" id="rozmiar" onblur="rozcz()">
+            </p>
+            <p>Czy rysunek ma mieć ramkę? <br>
+                <input type="checkbox" name="" id="rmks" checked onclick="ramka()"> Rysuj ramkę
+            </p>
+            <p>Jaki jest typ punktora listy? <br>
+                Dysk: <input type="radio" name="" id="" checked onclick="ksztalt('disc')"> <br>
+                Kwadrat: <input type="radio" onclick="ksztalt('square')" name="" id="" > <br>
+                Okrag:<input type="radio" name="" id="" onclick="ksztalt('circle')">
+            </p>
+        </p>
+    </div>
+    <div id="prawy">
+        <div id="block">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="zdj">
+        <ul id="lista"
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        </div>
+        <p id="tekst">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        </p>
+    </div>
+    <div id="stopka">
+        Autor: 1111111111
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #p1{
+            background-color: grey;
+        }
+        #p2{
+            background-color: blueviolet;
+            color: wheat;
+        }
+        #p3{
+            background-color: pink;
+        }
+    
+        #p4{
+            background-color: red;
+            color: wheat;
+        }
+    
+        #p5{
+            background-color: orangered;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div id="click">
+        <button type="submit" id="p1" 
+        onclick="kolor()">Kliknij aby zmienic kolor</button>
+    </div>
+
+    <div>
+        <p id="p2" onmouseover="najazd()">Zmiana rodzaju czcionki po najechaniu</p>
+    </div>
+
+    <div id="p3">
+        <h1 onmousewheel="tlo()">Zmiana koloru tla po zakreceniu kolem myszki</h1>
+    </div>
+    <div id="p4" ondblclick="dbclick()">
+        <p> Kliknij dwa razyy a cos sie zdarzy</p>
+    </div>
+    <div id="p5" onmouseout="poza()">
+        <p> Wyjedz myszka poza tekst, a ten wyrowna sie do srodka</p>
+    </div>
+
+    <script>
+        var a = false;
+        function kolor(){
+            var p1 = document.getElementById("p1");
+            if(a==false)
+            {
+                p1.style.color = 'red';
+                a=true;
+            }
+            else{
+                p1.style.color = 'black';
+                a=false;
+            }
+        }
+
+        function najazd(){
+            document.getElementById("p2").style.fontFamily="sans-serif"
+        
+        }
+        function tlo()
+        {
+            console.log("hejka")
+            document.getElementById("p3").style.backgroundColor="blue"
+        }
+        function dbclick(){
+            document.getElementById("p4").style.border="solid black 3px";
+        }
+        function poza(){
+            document.getElementById("p5").style.textAlign="center";
+        }
+    </script>
+</body>
+</html>

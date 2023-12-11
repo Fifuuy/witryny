@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return  check_Wzorzec()">
+        Nazwisko: <input type="text" name="" id="nazwisko"><br/>
+        Imie: <input type="text" name="" id="imie"> <br/>
+        E-mail: <input type="text" name="" id="email"> <br />
+        <input type="submit" value="Wyslij">
+    </form>
+    <script>
+        function check_Wzorzec(){
+            var nazwisko = document.getElementById('nazwisko').value;
+            var imie = document.getElementById("imie".vaule);
+            var email = document.getElementById("email").value;
+            
+            var nazwiskow =  /^[A-Za-z]{3,}$/;
+            var imiew = /^[A-Za-z]{2,}$/;
+            var emailw = /^[a-z]{3,16}+@+[a-z]{2,6}\.[a-z]{2,3}$/;
+            
+           
+        }
+
+        
+    </script>
+</body>
+</html>

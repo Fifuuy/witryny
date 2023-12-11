@@ -1,0 +1,13 @@
+
+body{
+    background-color: black;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+#wynik{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

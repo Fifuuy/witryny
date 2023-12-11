@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    L1 
+    <select name="" id="l1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select> <br />
+    L2
+    <input type="radio" name="wybor" id="li1"><label">1</label>
+    <input type="radio" name="wybor" id="li2"><label">2</label>
+    <input type="radio" name="wybor" id="li3"><label">3</label>
+    <input type="radio" name="wybor" id="li4"><label">4</label>
+    <br/>
+    <input type="checkbox" name="" id="suma"><label">suma</label>
+    <input type="checkbox" name="" id="roznica"><label">roznica</label>
+    <input type="checkbox" name="" id="iloczyn"><label">iloczyn</label> <br />
+    <input type="button" value="Oblicz" onclick="oblicz()">
+
+    <script>
+        l1 = document.getElementById("l1").value;
+        li1 = document.getElementById("li1");
+        li2 = document.getElementById("li2");
+        li3 = document.getElementById("li3");
+        li4 = document.getElementById("li4");
+        var sum1 = document.getElementById("check1");
+        var roz2 = document.getElementById("check2");
+        var ilo3 = document.getElementById("check3");
+
+        var l2 = 1;
+        if(li1.clicked==true){
+            l2=1;
+        }
+        if(li2.clicked==true){
+            l2=2;
+        }
+        if(li3.clicked==true){
+            l2=3;
+        }
+        if(li4.clicked==true){
+            l2=4;
+        }
+        var suma = l1+l2;
+        var roznica = l1-l2;
+        var iloczyn = l1*l2;
+        if(sum1.checked == true){
+            document.getElementById("suma").innerHTML = "suma: "+suma;
+        }
+        if(roz2.checked == true){
+            document.getElementById("roznica").innerHTML = "roznica: "+roznica;
+        }
+        if(ilo3.checked == true){
+            document.getElementById("iloczyn").innerHTML = "iloczyn: "+iloczyn;
+        }
+    </script>
+</body>
+</html>

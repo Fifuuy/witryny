@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="srodek">
+        <img src="2.png" alt="" id="left" onclick="clicks('left')">
+        <img src="1.png" alt="" id="main">
+        <img src="3.png" alt="" id="right" onclick="clicks('right')">
+    </div>
+    <div id="dol">
+        <img src="1.png" alt="" id="one" onmouseover="najazd(1)">
+        <img src="2.png" alt="" id="two" onmouseover="najazd(2)" >
+        <img src="3.png" alt="" id="three" onmouseover="najazd(3)">
+        <img src="4.png" alt="" id="four" onmouseover="najazd(4)">
+        <img src="5.png" alt="" id="five" onmouseover="najazd(5)">
+        <img src="6.png" alt="" id="six" onmouseover="najazd(6)">
+        <img src="7.png" alt="" id="seven" onmouseover="najazd(7)">
+    </div>
+
+    <script>
+        function najazd(a)
+        {
+            var left = document.getElementById("left");
+            var main = document.getElementById("main");
+            var right = document.getElementById("right")
+
+            left.src = a-1+".png" ;
+            right.src = a+1+".png";
+            main.src = a+".png";
+        }
+        function clicks(id)
+        {
+            var element = document.getElementById(id).src;
+            var nextID = element[element.length-5]/1;
+        
+            var left = document.getElementById("left");
+            var main = document.getElementById("main");
+            var right = document.getElementById("right")
+
+            left.src = nextID-1+".png" ;
+            right.src = nextID+1+".png";
+            main.src = nextID+".png";
+        }
+    </script>
+</body>
+</html>

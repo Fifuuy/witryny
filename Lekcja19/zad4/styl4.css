@@ -1,0 +1,55 @@
+body{
+    font-family: Arial;
+    background-color: AntiqueWhite    ;
+}
+#baner{
+    background-color: #7B5E57;
+    color: white;
+    text-align: center;
+    clear:both
+}
+#wizytowka{
+    color:  #5D4037;
+    max-width: 300px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 60px;
+    box-shadow: 0px 0px 20px grey;
+    clear: both;
+}
+#wizytowka img{
+    width: 100%;
+    padding-bottom: 20px;
+}
+#stopka1,#stopka3{
+    background-color: #7B5E57;
+    color: white;
+    height: 200px;
+    width: 33%;
+    float: left;
+}
+#stopka2{
+    background-color: #7B5E57;
+    color: white;
+    height: 200px;
+    width: 34%;
+    float: left;
+}
+h1{
+    font-weight: 300;
+
+}
+input{
+    background-color: #7B5E57;
+    color: white;
+    padding: 10px;
+    margin:5px;
+    border: 1px solid white;
+}
+input[type=submit]:hover{
+    background-color: white;
+    color: #7B5E57;
+}

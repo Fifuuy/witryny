@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#srodek{
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+#srodek,img{
+    width: 200px;
+    height: 200px;
+    gap: 5px;
+}
+
+

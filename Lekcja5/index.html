@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    L1: <select name="" id="l1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select> <br/>
+    L2  <select name="" id="l2">
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select> <br />
+    L3  <select name="" id="l3">
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select> <br/>
+    <input type="button" value="oblicz" onclick="oblicz()">
+    <p id="wynik"></p>
+
+        <script>
+            function oblicz(){
+            var l1 = document.getElementById("l1").value;
+            var l2 = document.getElementById("l2").value;
+            var l3 = document.getElementById("l3").value;
+
+            var wynik = l1*l2*l3;
+            document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+            }
+        </script>
+</body>
+</html>

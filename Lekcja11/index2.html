@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>Imie:<input type="text" name="" id="imie"><span id="nr1"></span></p>
+        <p>Nazwisko:<input type="text" name="" id="nazwisko"><span id="nr2"></span></p>
+        <p>Email:<input type="email" name="" id="email"><span id="nr3"></span></p>
+        <input type="button" value="Sprawdz" onclick="walidacja()">
+    </form>
+    <script>
+        function walidacja(){
+            document.getElementById('imie').style.backgroundColor='white';
+            document.getElementById('nazwisko').style.backgroundColor='white';
+            document.getElementById('email').style.backgroundColor='white';
+            document.getElementById('nr1').innerHTML="";
+            document.getElementById('nr2').innerHTML="";
+            document.getElementById('nr3').innerHTML="";
+            wzor_imie = /^[A-Z]{1}[a-z]{1,}$/;
+            wzor_naz = /^[A-Z]{1}[a-z]{2,}$/;
+            wzor_mail = /^[A-Za-z0-9./-]{1,}@[a-zA-Z0-9]{1,}.[a-z]{2,3}$/;
+            imie = document.getElementById('imie').value;
+            nazwisko = document.getElementById('nazwisko').value;
+            mail = document.getElementById('email').value;
+
+            if(!wzor_imie.test(imie)){
+                document.getElementById('nr1').innerHTML="Złe imię!";
+                document.getElementById('imie').style.backgroundColor='yellow';
+                document.getElementById('imie').focus();
+            }
+            if(!wzor_naz.test(nazwisko)){
+                document.getElementById('nr2').innerHTML="Złe nazwisko!";
+                document.getElementById('nazwisko').style.backgroundColor='yellow';
+                document.getElementById('nazwisko').focus();
+            }
+            if(!wzor_mail.test(mail)){
+                document.getElementById('nr3').innerHTML="Zły adres e-mail!";
+                document.getElementById('email').style.backgroundColor='yellow';
+                document.getElementById('email').focus();
+            }
+        }
+    </script>
+</body>
+</html>

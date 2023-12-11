@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="a">
+    <input type="text" name="" id="b">
+    <input type="text" name="" id="c">
+    <input type="button" value="Oblicz" onclick="oblicz()">
+    <p id="objetosc"></p>
+    <p id="pol"></p>
+
+    <script>
+        function oblicz(){
+            var w1 = document.getElementById("a").value;
+            var w2 = document.getElementById("b").value;
+            var w3 = document.getElementById("c").value ;
+
+            if(isNaN(w1)|| isNaN(w2)|| isNaN(w3)){
+                alert("Wpisz poprawna liczbe ")
+                    return;
+            }
+            if(w1<0 || w2<0 || w3<0){
+                alert("Wpisz poprawna liczbe ")
+                    return;
+                }
+            var obj = w1*w2*w3;
+            var pole = 2*w1*w2+2*w2*w3+2*w1*w3;
+            document.getElementById("objetosc").innerHTML = "Objetosc: "+obj;
+            document.getElementById("pol").innerHTML = "Pole: "+pole;
+
+        }
+    </script>
+</body>
+</html>

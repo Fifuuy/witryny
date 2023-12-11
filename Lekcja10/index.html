@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="one" onclick="zmiana(0)">
+
+    </div>
+    <div id="two" onclick="zmiana(1)">
+
+    </div>
+    <div id="three" onclick="zmiana(2)">
+
+    </div>
+    <script>
+        var colors = ['green','red','yellow']
+        var current_tab = ['green','red','yellow']
+        function zmiana(a){
+
+            var los = Math.round(Math.random()*2);
+            console.log(los)
+            if(a==0)
+            {
+                document.getElementById('one').style="background-color:"+colors[los]+";";
+                current_tab[a]=colors[los];
+            }
+            if(a==1)
+            {
+                document.getElementById('two').style="background-color:"+colors[los]+";";
+                current_tab[a]=colors[los];
+            }
+            if(a==2)
+            {
+                document.getElementById('three').style="background-color:"+colors[los]+";";
+                current_tab[a]=colors[los];
+            }
+        }
+    </script>
+</body>
+</html>

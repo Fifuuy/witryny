@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        L1:  <br />
+        <input type="radio" name="wybor" id="li1"> 1  <br />
+        <input type="radio" name="wybor" id="li2"> 2  <br />
+        <input type="radio" name="wybor" id="li3"> 3  <br />
+        <input type="radio" name="wybor" id="li4"> 4 <br />
+        L2: 
+            <select name="" id="l2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> <br/>
+        <input type="button" id = "przycisk" value="oblicz" onclick="oblicz()">
+        <p id="wynik"></p>
+    </form>
+    <script>
+        function oblicz(){
+        var li1 = document.getElementById("li1");
+        var li2 = document.getElementById("li2");
+        var li3 = document.getElementById("li3");
+        var li4 = document.getElementById("li4");
+        var l2 = document.getElementById("l2").value*1;
+        var wa1 = 1;
+        if(li1.checked==true){
+            wa1 = 1;
+        }
+        if(li2.checked==true){
+            wa1 = 2;
+        }
+        if(li3.checked==true){
+            wa1 = 3;
+        }
+        if(li4.checked==true){
+            wa1 = 4;
+        }
+        
+        var wynik = Math.pow(wa1,l2);
+        document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+    </script>
+</body>
+</html>

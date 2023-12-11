@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>
+        <img src="1.png" alt=""  onclick="zmiana(1)" id = "i1"
+        onmouseover="najazd(1)" onmouseout="leave(1)" 
+        onmousedown="rozmiar(1)" onmouseup="powrot(1)">
+        <img src="2.png" alt="" onclick="zmiana(2)" id="i2"
+        onmouseover="najazd(2)" onmouseout="leave(2)"
+        onmousedown="rozmiar(2)" onmouseup="powrot(2)">
+        <img src="3.png" alt="" onclick="zmiana(3)" id="i3"
+        onmouseover="najazd(3)" onmouseout="leave(3)"
+        onmousedown="rozmiar(3)" onmouseup="powrot(3)">
+        <img src="4.png" alt="" onclick="zmiana(4)" id="i4"
+        onmouseover="najazd(4)" onmouseout="leave(4)"
+        onmousedown="rozmiar(4)" onmouseup="powrot(4)">
+    </p>
+    <p id = "wynik">
+
+    </p>
+
+    <script>
+        function zmiana(a){
+            var i1 = document.getElementById("i1");
+            var i2 = document.getElementById("i2");
+            var i3 = document.getElementById("i3");
+            var i4 = document.getElementById("i4");
+
+            if( a==1){
+                document.getElementById("wynik").innerHTML ='<img src="1.png">'; 
+            }    
+            if( a==2){
+                document.getElementById("wynik").innerHTML ='<img src="2.png">'; 
+            }    
+            if( a==3){
+                document.getElementById("wynik").innerHTML ='<img src="3.png">'; 
+            }    
+            if( a==4){
+                document.getElementById("wynik").innerHTML ='<img src="4.png">'; 
+            }    
+        }
+        function najazd(a){
+            var i1 = document.getElementById("i1");
+            var i2 = document.getElementById("i2");
+            var i3 = document.getElementById("i3");
+            var i4 = document.getElementById("i4");
+
+            if( a==1){
+                document.getElementById("i1").style.borderRadius = "100%";
+            }    
+            if( a==2){
+                document.getElementById("i2").style.borderRadius = "100%";; 
+            }    
+            if( a==3){
+                document.getElementById("i3").style.borderRadius = "100%"; 
+            }    
+            if( a==4){
+                document.getElementById("i4").style.borderRadius = "100%"; 
+            } 
+
+        }
+        function leave(a){
+            var i1 = document.getElementById("i1");
+            var i2 = document.getElementById("i2");
+            var i3 = document.getElementById("i3");
+            var i4 = document.getElementById("i4");
+
+            if( a==1){
+                document.getElementById("i1").style.borderRadius = "0%";
+            }    
+            if( a==2){
+                document.getElementById("i2").style.borderRadius = "0%";; 
+            }    
+            if( a==3){
+                document.getElementById("i3").style.borderRadius = "0%"; 
+            }    
+            if( a==4){
+                document.getElementById("i4").style.borderRadius = "0%"; 
+            } 
+
+        }
+        function rozmiar(a){
+            var i1 = document.getElementById("i1");
+            var i2 = document.getElementById("i2");
+            var i3 = document.getElementById("i3");
+            var i4 = document.getElementById("i4");
+
+            if( a==1){
+                document.getElementById("i1").style.width="100px";
+                document.getElementById("i1").style.height="100px";
+            }    
+            if( a==2){
+                document.getElementById("i2").style.width="100px";
+                document.getElementById("i2").style.height="100px";
+            }    
+            if( a==3){
+                document.getElementById("i3").style.width="100px";
+                document.getElementById("i3").style.height="100px";
+            }    
+            if( a==4){
+                document.getElementById("i4").style.width="100px"; 
+                document.getElementById("i4").style.height="100px";
+            } 
+        }
+        function powrot(a){
+            var i1 = document.getElementById("i1");
+            var i2 = document.getElementById("i2");
+            var i3 = document.getElementById("i3");
+            var i4 = document.getElementById("i4");
+
+            if( a==1){
+                document.getElementById("i1").style.width="300px";
+                document.getElementById("i1").style.height="300px";
+            }    
+            if( a==2){
+                document.getElementById("i2").style.width="300px";
+                document.getElementById("i2").style.height="300px";
+            }    
+            if( a==3){
+                document.getElementById("i3").style.width="300px";
+                document.getElementById("i3").style.height="300px";
+            }    
+            if( a==4){
+                document.getElementById("i4").style.width="300px"; 
+                document.getElementById("i4").style.height="300px";
+            } 
+        }
+        
+
+    </script>
+</body>
+</html>

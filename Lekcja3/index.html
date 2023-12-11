@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        L1: <input type="checkbox" name="" id="l1"> 10  <br />
+        L2: <input type="checkbox" name="" id="l2"> 20  <br />
+        L3: <input type="checkbox" name="" id="l3"> 30  <br />
+        L4: <input type="checkbox" name="" id="l4"> 40  <br />
+        L5: <input type="checkbox" name="" id="l5"> 50  <br />
+        <input type="button" value="oblicz" onclick="oblicz()">
+    </form>=
+    <p id="wynik"> </p>
+    <script>
+
+        function oblicz(){
+        var l1 = document.getElementById("l1").checked;
+        var l2 = document.getElementById("l2").checked;
+        var l3 = document.getElementById("l3").checked;
+        var l4 = document.getElementById("l4").checked;
+        var l5 = document.getElementById("l5").checked;
+        
+        var l1v = 1;
+        var l2v = 1;
+        var l3v = 1;
+        var l4v = 1;
+        var l5v = 1;
+
+            if(l1==true){
+                l1v=10;
+            }
+            if(l2==true){
+                l2v=20;
+            }
+            if(l3==true){
+                l3v = 30;
+            }
+            if(l4==true){
+                l4v = 40;
+            }
+            if(l5==true){
+                l5v = 50;
+            }
+           var  wynik = l1v*l2v*l3v*l4v*l5v;
+           if(wynik==1){
+               wynik = 0;
+           }
+           document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+    </script>
+</body>
+</html>
